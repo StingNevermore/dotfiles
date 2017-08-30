@@ -73,7 +73,6 @@ Plugin 'gcmt/wildfire.vim'
 Plugin 'sjl/gundo.vim'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'suan/vim-instant-markdown'
-Plugin 'lilydjwg/fcitx.vim'
 " 插件列表结束
 call vundle#end()
 filetype plugin indent on
