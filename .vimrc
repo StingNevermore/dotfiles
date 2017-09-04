@@ -217,3 +217,5 @@ nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
 
 set nocompatible
 set backspace=indent,eol,start
+
+set clipboard=unnamed
