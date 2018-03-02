@@ -78,10 +78,10 @@ call vundle#end()
 filetype plugin indent on
 
 " 配色方案
-set background=dark
+"set background=dark
 colorscheme solarized
 "colorscheme molokai
-"colorscheme phd
+colorscheme phd
 
 " 禁止光标闪烁
 set gcr=a:block-blinkon0
@@ -102,7 +102,7 @@ set ruler
 set number
 " 高亮显示当前行/列
 set cursorline
-set cursorcolumn
+"set cursorcolumn
 " 高亮显示搜索结果
 set hlsearch
 
@@ -214,6 +214,8 @@ nmap <Leader>tp :tprevious<CR>
 nnoremap <leader>jc :YcmCompleter GoToDeclaration<CR>
 " 只能是 #include 或已打开的文件
 nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+
+let g:ycm_global_ycm_extra_conf = '/Users/suncheng/.ycm_extra_conf.py'
 
 set nocompatible
 set backspace=indent,eol,start

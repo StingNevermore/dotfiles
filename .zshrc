@@ -5,7 +5,8 @@ export ZSH=/Users/suncheng/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="robbyrussell"
+DEFAULT_USER="suncheng"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 #ZSH_THEME="powerline"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -53,7 +54,7 @@ ZSH_THEME="robbyrussell"
 plugins=(git mvn autojump osx brew)
 
 # User configuration
-export JAVA_HOME=`/usr/libexec/java_home`
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 export GRADLE_HOME="/Users/suncheng/localbin/gradle/latest"
 export PATH="$JAVA_HOME/bin:/Users/suncheng/tools/apache-maven-3.3.9/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=~/cmds:$GRADLE_HOME/bin:$PATH
@@ -105,13 +106,13 @@ alias -s bz2='tar -xjvf'
 alias post-review='rbt post --stamp --target-groups backend-dev' #rbtools
 alias rsdel-quick='rsync -t --delete -r'
 alias vim='/usr/local/bin/vim'
-alias install='mvn -U clean install'
+alias install='mvn -U clean install -Dmaven.test.skip=true'
 alias copy_depency='mvn -DexcludeScope=provided clean package dependency:copy-dependencies -Dmaven.test.skip=true -U'
 alias package='mvn -U clean package'
 alias ctags="`brew --prefix`/bin/ctags"
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-export SCALA_HOME="/Users/suncheng/opensource/scala/latest"
+export SCALA_HOME="/usr/local/scala/latest"
 export PATH="$PATH:$SCALA_HOME/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
@@ -142,3 +143,8 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export EDITOR="vim"
+/usr/local/bin/archey
+
+eval $(thefuck --alias)
+alias ip='curl myip.ipip.net'
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
